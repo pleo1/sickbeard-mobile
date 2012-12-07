@@ -1,0 +1,238 @@
+//$body-bg-color: #49708A;
+//$base_color: #49708A;
+
+$theme-name: 'black';
+
+$base_color: #607848;
+$body-bg-color: #222;
+$form-bg-color: #222;
+$list-bg-color: rgba(0,0,0,0);
+$list-pressed-color: #111;
+$list-active-color: #111;
+$list-active-gradient: #111;
+
+$form-field-bg-color: #161616;
+$toolbar-input-bg: #161616;
+$toolbar-input-color: #b3b3b3;
+
+@import 'sencha-touch/default/all';
+@import '../../lib/ux/_installapp.scss';
+
+@include sencha-panel;
+@include sencha-buttons;
+@include sencha-sheet;
+@include sencha-picker;
+@include sencha-tabs;
+@include sencha-toolbar;
+@include sencha-toolbar-forms;
+@include sencha-indexbar;
+@include sencha-list;
+@include sencha-layout;
+@include sencha-carousel;
+@include sencha-list-pullrefresh;
+@include sencha-form;
+@include sencha-msgbox;
+@include sencha-loading-spinner;
+
+
+@include sencha-toolbar-ui('black', #222222, 'matte');
+@include sencha-toolbar-ui('grey', #333333, 'matte');
+
+.x-layout-card-item,
+.x-panel-inner,
+.x-form .x-scroll-container {
+    background: #222;
+    @include background-image(linear-gradient(top, #383737, #202020));
+}
+
+
+.episodes .name, .shows .name {
+    font-weight: 600;
+    font-size: 90%;
+    letter-spacing: -0.03em;
+}
+.episodes .x-item-selected .name,
+.shows .x-item-selected .name {
+    text-shadow: none;
+}
+
+.shows .x-list-item img.poster {
+    width: 60px;
+    margin: 0 0 5px 5px;
+    float: left;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.4);
+    border: 1px solid rgba(40,40,40,0.1);
+    -webkit-transform:translate3d(0,0,0);
+    min-width: 60px;
+    min-height: 87px;
+    background: #222;
+}
+
+.shows .x-list-item .details {
+    margin-left: 82px;
+}
+
+.shows .x-list-item .name {
+    margin-bottom: 4px;
+}
+
+.shows .x-list-item-body  {
+    min-height: 112px;
+}
+
+.episodes .subline,
+.episodes .description {
+    text-shadow: 0 1px rgba(0,0,0,0.2);
+    font-weight: 300;
+    font-size: 80%;
+    color: #aaaaaa;
+}
+
+.shows .subline,
+.show .description,
+.show_detail .subline {
+    font-size: 13px;
+    color: #aaaaaa;
+    line-height: 14px;
+}
+
+.episodes .description {
+    font-weight: 200;
+    font-size: 75%;
+    line-height: 16px;
+    margin-top: 4px;
+}
+
+.episodes .status {
+    font-size: 75%;
+}
+
+.x-layout-card-item > .show_detail,
+.show_detail {
+    background: #222;
+}
+
+.show_detail .wrapper {
+    background-size: cover;
+    background-position: 78% 0;
+}
+
+.show_detail .inner_wrapper {
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.78);
+}
+
+.show_detail .wrapper:before,
+.show_detail .wrapper:after,
+.show_detail .inner_wrapper:before,
+.show_detail .inner_wrapper:after {
+    content:"";
+    display:table;
+}
+
+.show_detail .wrapper:after,
+.show_detail .inner_wrapper:after {
+    clear:both;
+}
+
+.show_detail img.poster {
+    float: left;
+    width: 70px;
+    height: 102px;
+    margin: 12px;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.4);
+    border: 1px solid rgba(120,120,120,0.3);
+}
+
+.show_detail .details {
+    margin-left: 100px;
+}
+
+
+.show_detail h2 {
+    font-size: 115%;
+    font-weight: 600;
+    text-shadow: 0 1px #efefef;
+    letter-spacing: -1px;
+    line-height: 92%;
+    color: #fff;
+    text-shadow: 0 1px rgba(0,0,0,0.4);
+    margin: 10px 5px 5px 0;
+    padding: 0;
+}
+
+.x-list.dark,
+.x-slidenavigation-list {
+    background: #383737; /* Old browsers */
+    background: -moz-linear-gradient(top,  #383737 0%, #202020 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#383737), color-stop(100%,#202020)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #383737 0%,#202020 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #383737 0%,#202020 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #383737 0%,#202020 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #383737 0%,#202020 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#383737', endColorstr='#202020',GradientType=0 ); /* IE6-9 */
+}
+
+.x-list.dark .x-list-item,
+.x-slidenavigation-list .x-list-item {
+    border-top: 1px solid rgba(0,0,0,0.4);
+    border-bottom: 1px solid rgba(68,68,68,0.4);
+}
+
+.x-list.dark .x-list-item .x-list-item-body,
+.x-slidenavigation-list .x-list-item .x-list-item-body {
+    color: #fff;
+    text-shadow: 0 1px rgba(0,0,0,0.4);
+}
+
+.x-list.dark .x-list-item .x-list-header,
+.x-list.dark .x-list-item .x-list-header-swap 
+.x-list-normal.dark .x-list-header-wrap .x-item-header,
+.x-list-normal.dark .x-list-header,
+.x-slidenavigation-list .x-list-item .x-list-header, 
+.x-slidenavigation-list .x-list-item .x-list-header-swap,
+.x-slidenavigation-list.x-list-normal .x-list-header-wrap .x-list-header, 
+.x-slidenavigation-list.x-list-normal .x-list-header-swap {
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0.85) 0%, rgba(28,27,27,0.85) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.85)), color-stop(100%,rgba(28,27,27,0.85))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.85) 0%,rgba(28,27,27,0.85) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0.85) 0%,rgba(28,27,27,0.85) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0.85) 0%,rgba(28,27,27,0.85) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0.85) 0%,rgba(28,27,27,0.85) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6000000', endColorstr='#e61c1b1b',GradientType=0 ); /* IE6-9 */
+
+    border-bottom: 1px solid #333333;
+    border-top: 1px solid #222222;
+
+    color: #ffffff;
+    text-shadow: 0 1px rgba(0,0,0,0.4);
+}
+
+.x-list.dark .x-list-item.x-item-pressed,
+.x-slidenavigation-list .x-list-item.x-item-pressed {
+    background: #222;
+}
+
+.x-list.dark .x-indexbar.x-indexbar-vertical div {
+    color: rgba(255, 255, 255, 0.49);
+    text-shadow: 0 1px rgba(0,0,0,0.4);
+}
+
+.x-list.dark .x-indexbar.x-indexbar-vertical.x-indexbar-pressed {
+    background: rgba(0,0,0,0.5);
+}
+
+.x-list.dark .x-indexbar.x-indexbar-vertical.x-indexbar-pressed div {
+    color: #fff;
+}
+
+.x-list-pullrefresh .x-list-pullrefresh-wrap {
+    color: #ccc;
+}
+
+.episodes .info.downloaded,
+.episodes .info.skipped,
+.episodes .info.ignored {
+    color: rgba(255,255,255,0.5);
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html manifest="" lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>SickBeard</title>
+    <style type="text/css">
+         /**
+         * Example of an initial loading indicator.
+         * It is recommended to keep this as minimal as possible to provide instant feedback
+         * while other resources are still being loaded for the first time
+         */
+        html, body {
+            height: 100%;
+            background: #222; /* Old browsers */
+            background: -moz-linear-gradient(top,  #383737 0%, #202020 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#383737), color-stop(100%,#202020)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #383737 0%,#202020 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #383737 0%,#202020 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #383737 0%,#202020 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #383737 0%,#202020 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#383737', endColorstr='#202020',GradientType=0 ); /* IE6-9 */
+        }
+
+        #appLoadingIndicator {
+            height: 100%;
+            width: 100%;
+        }
+
+        #appLoadingIndicator #logo {
+            text-align:center;
+            height: 100%;
+            width: 100%;
+            background: url('resources/startup/640x920.png') no-repeat top left;
+            background-size: contain;
+        }
+    </style>
+    <!-- The line below must be kept intact for Sencha Command to build your application -->
+    <script id="microloader" type="text/javascript" src="touch/microloader/development.js"></script>
+</head>
+<body>
+    <div id="appLoadingIndicator">
+        <div id="logo"></div>
+    </div>
+</body>
+</html>
